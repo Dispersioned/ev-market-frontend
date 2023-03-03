@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import logoIcon from 'assets/icons/logo.svg';
 import profileIcon from 'assets/icons/profile.svg';
 import { Link } from 'react-router-dom';
@@ -16,6 +16,7 @@ export function Header() {
             <img src={logoIcon} alt="logo" />
           </Link>
           <Navigation />
+          <Typography>contact us</Typography>
           <Link to={ROUTES.profile}>
             <img src={profileIcon} alt="profile" />
           </Link>
