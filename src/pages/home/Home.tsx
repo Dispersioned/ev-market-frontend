@@ -1,4 +1,4 @@
-import { Layout } from 'shared/ui/layout';
+import { Layout } from 'widgets/layout';
 
 export function Home() {
   return <Layout>Home</Layout>;
