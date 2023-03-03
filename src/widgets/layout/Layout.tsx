@@ -10,8 +10,8 @@ export function Layout({ children }: LayoutProps) {
   return (
     <UILayout>
       <Header />
-      <Container maxWidth="xl" component="main">
-        {children}
+      <Container maxWidth="xl">
+        <main>{children}</main>
       </Container>
       <Footer />
     </UILayout>
