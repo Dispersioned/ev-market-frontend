@@ -23,31 +23,33 @@ export const NavItem = styled(Typography)`
   font-weight: bold;
   font-size: 20px;
   color: #fff;
+  padding: 0 10px;
 
   &::before,
   &::after {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
+    height: 0;
+    width: 3px;
+    border-radius: 1px;
     background-color: #fff;
     transition: all 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   &::after {
-    top: -5px;
+    left: 0;
   }
 
   &::before {
-    bottom: -5px;
+    right: 0;
   }
 
   &:hover {
     &::before,
     &::after {
-      width: 100%;
+      height: 60%;
     }
   }
 ` as typeof Typography;
