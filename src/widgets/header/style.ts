@@ -20,6 +20,8 @@ export const NavList = styled('ul')`
 
 export const NavItem = styled(Typography)`
   position: relative;
+  font-weight: bold;
+  font-size: 20px;
   color: #fff;
 
   &::before,
@@ -29,7 +31,7 @@ export const NavItem = styled(Typography)`
     left: 50%;
     transform: translateX(-50%);
     width: 0;
-    height: 1px;
+    height: 2px;
     background-color: #fff;
     transition: all 0.3s ease;
   }
