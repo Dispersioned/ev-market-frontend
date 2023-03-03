@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
 
 import { Navigation } from './Navigation';
-import { Content } from './style';
+import { Content, UIHeader } from './style';
 
 export function Header() {
   return (
-    <header>
+    <UIHeader>
       <Container maxWidth="xl">
         <Content>
           <Link to={ROUTES.home}>
@@ -22,6 +22,6 @@ export function Header() {
           </Link>
         </Content>
       </Container>
-    </header>
+    </UIHeader>
   );
 }
