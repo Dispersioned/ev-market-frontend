@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
 
-import { NavList } from './style';
+import { NavItem, NavList } from './style';
 
 type NavLink = {
   title: string;
@@ -16,7 +16,9 @@ export function Navigation() {
       <NavList>
         {navLinks.map((navLink) => (
           <li key={navLink.href}>
-            <Link to={navLink.href}>{navLink.title}</Link>
+            <NavItem component={Link} to={navLink.href}>
+              {navLink.title}
+            </NavItem>
           </li>
         ))}
       </NavList>
