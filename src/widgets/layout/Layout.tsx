@@ -1,4 +1,6 @@
 import { Container } from '@mui/material';
+import { Footer } from 'widgets/footer';
+import { Header } from 'widgets/header';
 
 import { UILayout } from './style';
 
@@ -7,11 +9,11 @@ type LayoutProps = React.PropsWithChildren;
 export function Layout({ children }: LayoutProps) {
   return (
     <UILayout>
-      <header>header</header>
+      <Header />
       <Container maxWidth="xl" component="main">
         {children}
       </Container>
-      <footer style={{ marginTop: 'auto' }}>footer</footer>
+      <Footer />
     </UILayout>
   );
 }

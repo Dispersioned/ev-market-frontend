@@ -8,19 +8,20 @@ import { Home } from 'pages/home';
 import { OrderInfo } from 'pages/order-info';
 import { Profile } from 'pages/profile';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import { ROUTES } from 'shared/config/routes';
 
 export function AppRouter() {
   return (
     <Routes>
-      <Route path="admin" element={<AdminPanel />} />
-      <Route path="auth" element={<Auth />} />
-      <Route path="cart" element={<Cart />} />
-      <Route path="catalog" element={<Catalog />} />
-      <Route path="checkout" element={<Checkout />} />
-      <Route path="compare" element={<Compare />} />
+      <Route path={ROUTES.admin} element={<AdminPanel />} />
+      <Route path={ROUTES.auth} element={<Auth />} />
+      <Route path={ROUTES.cart} element={<Cart />} />
+      <Route path={ROUTES.catalog} element={<Catalog />} />
+      <Route path={ROUTES.checkout} element={<Checkout />} />
+      <Route path={ROUTES.compare} element={<Compare />} />
       <Route index element={<Home />} />
-      <Route path="order/:id" element={<OrderInfo />} />
-      <Route path="profile" element={<Profile />} />
+      <Route path={ROUTES.order} element={<OrderInfo />} />
+      <Route path={ROUTES.profile} element={<Profile />} />
       <Route path="*" element={<Navigate replace to="/" />} />
     </Routes>
   );

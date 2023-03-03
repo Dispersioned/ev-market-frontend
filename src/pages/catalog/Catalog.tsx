@@ -1,3 +1,5 @@
+import { Layout } from 'widgets/layout';
+
 export function Catalog() {
-  return <div>Catalog</div>;
+  return <Layout>Catalog</Layout>;
 }
