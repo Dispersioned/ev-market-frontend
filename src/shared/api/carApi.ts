@@ -11,7 +11,7 @@ export const carApi = createApi({
   endpoints: (builder) => ({
     fetchAllCars: builder.query<ICarView, void>({
       query: () => ({
-        url: 'car',
+        url: 'car/all',
       }),
     }),
   }),
