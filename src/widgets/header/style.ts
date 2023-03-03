@@ -20,7 +20,7 @@ export const NavList = styled('ul')`
 
 export const NavItem = styled(Typography)`
   position: relative;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 20px;
   color: #fff;
   padding: 0 10px;
@@ -30,7 +30,7 @@ export const NavItem = styled(Typography)`
     content: '';
     position: absolute;
     height: 0;
-    width: 3px;
+    width: 2px;
     border-radius: 1px;
     background-color: #fff;
     transition: all 0.3s ease;
