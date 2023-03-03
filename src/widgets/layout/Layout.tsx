@@ -1,4 +1,5 @@
 import { Container } from '@mui/material';
+import { Footer } from 'widgets/footer';
 
 import { UILayout } from './style';
 
@@ -11,7 +12,7 @@ export function Layout({ children }: LayoutProps) {
       <Container maxWidth="xl" component="main">
         {children}
       </Container>
-      <footer style={{ marginTop: 'auto' }}>footer</footer>
+      <Footer />
     </UILayout>
   );
 }
