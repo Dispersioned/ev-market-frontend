@@ -5,7 +5,7 @@ import { NavList } from './style';
 
 type NavLink = {
   title: string;
-  href: keyof typeof ROUTES;
+  href: (typeof ROUTES)[keyof typeof ROUTES];
 };
 
 export function Navigation() {
