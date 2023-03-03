@@ -1,3 +1,5 @@
+import { Layout } from 'widgets/layout';
+
 export function Profile() {
-  return <div>Profile</div>;
+  return <Layout>Profile</Layout>;
 }

@@ -1,5 +1,6 @@
 import { Container } from '@mui/material';
-import Logo from 'assets/icons/logo.svg';
+import logoIcon from 'assets/icons/logo.svg';
+import profileIcon from 'assets/icons/profile.svg';
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
 
@@ -12,9 +13,12 @@ export function Header() {
       <Container maxWidth="xl">
         <Content>
           <Link to={ROUTES.home}>
-            <img src={Logo} alt="logo" />
+            <img src={logoIcon} alt="logo" />
           </Link>
           <Navigation />
+          <Link to={ROUTES.profile}>
+            <img src={profileIcon} alt="profile" />
+          </Link>
         </Content>
       </Container>
     </header>
