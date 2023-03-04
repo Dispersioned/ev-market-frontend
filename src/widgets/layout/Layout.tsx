@@ -2,7 +2,7 @@ import { Container } from '@mui/material';
 import { Footer } from 'widgets/footer';
 import { Header } from 'widgets/header';
 
-import { UILayout } from './style';
+import { UILayout } from './styles';
 
 type LayoutProps = React.PropsWithChildren;
 

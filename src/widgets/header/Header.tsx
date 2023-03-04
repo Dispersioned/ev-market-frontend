@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
 
 import { Navigation } from './Navigation';
-import { Content, UIHeader } from './style';
+import { Content, UIHeader } from './styles';
 
 export function Header() {
   return (
