@@ -12,5 +12,10 @@ export const carApi = createApi({
         url: 'car/all',
       }),
     }),
+    fetchCarById: builder.query<ICarView[], number>({
+      query: (id) => ({
+        url: `car/${id}`,
+      }),
+    }),
   }),
 });
