@@ -8,8 +8,7 @@ export function CarsList() {
   const { data: cars, isLoading, error } = carApi.useFetchAllCarsQuery();
 
   if (isLoading) return <Loading />;
-
-  if (error) return <div>error</div>;
+  if (error) return <ErrorScreen error={error} />;
 
   return <List>{cars && cars.map((car) => <CarItem key={car.id} car={car} />)}</List>;
 }
