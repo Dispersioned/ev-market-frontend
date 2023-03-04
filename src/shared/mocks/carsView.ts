@@ -1,7 +1,7 @@
 import mockImage from 'shared/mocks/image.png';
 import { ICarView } from 'shared/types';
 
-export const carViewMock: ICarView[] = [
+export const carsViewMock: ICarView[] = [
   {
     id: 5,
     name: '2019 JAGUAR I-RACE',
