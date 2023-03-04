@@ -1,3 +1,4 @@
+import logoIcon from 'assets/icons/logo.svg';
 import { ICarView } from 'shared/types';
 
 export const carViewMock: ICarView[] = [
@@ -9,7 +10,7 @@ export const carViewMock: ICarView[] = [
       {
         id: 1,
         name: 'first feature',
-        iconUrl: 'not implemented',
+        iconUrl: logoIcon,
       },
     ],
     imageUrl: 'not provided',
@@ -22,5 +23,31 @@ export const carViewMock: ICarView[] = [
       country: 'Russia',
     },
     mileage: 12452,
+  },
+  {
+    id: 3,
+    accelerationTime: 6,
+    batteryCapacity: 4000,
+    features: [
+      {
+        id: 2,
+        name: 'first feature',
+        iconUrl: logoIcon,
+      },
+      {
+        id: 2,
+        name: 'second feature',
+        iconUrl: logoIcon,
+      },
+      {
+        id: 2,
+        name: 'third feature',
+        iconUrl: logoIcon,
+      },
+    ],
+    imageUrl: 'not provided',
+    power: 700,
+    price: 45000,
+    range: 220,
   },
 ];
