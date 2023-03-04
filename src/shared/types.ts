@@ -50,37 +50,29 @@ export type IVehicleCondition = {
   CertifiedPreOwned: 'CertifiedPreOwned';
 };
 
-export type ICarView = {
+type ICarGeneral = {
   id: number;
   carName: string;
-  imageUrl: string;
   price: number;
   range: number;
   power: number;
   batteryCapacity: number;
   accelerationTime: number;
-  features: IFeature[];
   // if owned
   mileage?: number;
   // if owned
   location?: ILocation;
 };
 
-export type ICar = {
-  id: number;
-  // year + Manufacturer + model
-  carName: string;
+export type ICarView = ICarGeneral & {
+  imageUrl: string;
+  features: IFeature[];
+};
+
+export type ICar = ICarGeneral & {
   manufacturer: IManufacturer;
-  // in $ ?
-  price: number;
-  // kw
-  power: number;
-  range: number;
-  // kwh
-  batteryCapacity: number;
   chargingOptions: IChargingOption[];
   driveTrain: IDriveTrain;
-  accelerationTime: number;
   topSpeed: number;
   weight: number;
   frontCargoVolume: number;
@@ -89,18 +81,12 @@ export type ICar = {
   exteriorColor: ICarColor;
   bodyStyle: IBodyStyle;
   manufacturingDate: Date;
-
-  // for get by id
-  ImageUrls: string[];
+  imageUrls: string[];
 
   // if used
-  mileage: number;
+  condition?: IVehicleCondition;
   // if used
-  condition: IVehicleCondition;
+  listedForSaleDate?: Date;
   // if used
-  location: ILocation;
-  // if used
-  listedForSaleDate: Date;
-  // if used
-  sellersStory: string;
+  sellersStory?: string;
 };
