@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 
-import { MUIThemeProvider } from './providers/MuiThemeProvider';
+import { MUIThemeProvider } from './providers/MuiThemeProvider1';
 import { ReduxProvider } from './providers/ReduxProvider';
 import { AppRouter } from './router/AppRouter';
 import './styles/global.css';
