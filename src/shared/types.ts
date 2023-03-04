@@ -22,33 +22,22 @@ export type IChargingOption = {
   description: string;
 };
 
-export type IDriveTrain = {
-  RWD: 'RWD';
-  FWD: 'FWD';
-  AWD: 'AWD';
-};
+export type IDriveTrain = 'RWD' | 'FWD' | 'AWD';
 
-export type ICarColor = {
-  undefined: undefined;
-};
+export type ICarColor = string;
 
-export type IBodyStyle = {
-  Sedan: 'Sedan';
-  Coupe: 'Coupe';
-  SportsCar: 'SportsCar';
-  StationWagon: 'StationWagon';
-  HatchBack: 'HatchBack';
-  Convertible: 'Convertible';
-  SUV: 'SUV';
-  MiniVan: 'MiniVan';
-  PickUpTruck: 'PickUpTruck';
-};
+export type IBodyStyle =
+  | 'Sedan'
+  | 'Coupe'
+  | 'SportsCar'
+  | 'StationWagon'
+  | 'HatchBack'
+  | 'Convertible'
+  | 'SUV'
+  | 'MiniVan'
+  | 'PickUpTruck';
 
-export type IVehicleCondition = {
-  New: 'New';
-  PreOwned: 'PreOwned';
-  CertifiedPreOwned: 'CertifiedPreOwned';
-};
+export type IVehicleCondition = 'New' | 'PreOwned' | 'CertifiedPreOwned';
 
 type ICarGeneral = {
   id: number;
