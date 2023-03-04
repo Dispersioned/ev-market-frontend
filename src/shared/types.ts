@@ -13,6 +13,7 @@ export type ILocation = {
 
 export type ICarView = {
   id: number;
+  name: string;
   imageUrl: string;
   price: number;
   range: number;

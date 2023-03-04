@@ -1,5 +1,4 @@
 import { Typography, styled } from '@mui/material';
-import { Link } from 'react-router-dom';
 import { COLORS } from 'shared/config/colors';
 
 export const UIHeader = styled('header')`

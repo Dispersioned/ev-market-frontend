@@ -11,7 +11,7 @@ export function Layout({ children }: LayoutProps) {
     <UILayout>
       <Header />
       <Container maxWidth="xl">
-        <main>{children}</main>
+        <main style={{ marginTop: 15 }}>{children}</main>
       </Container>
       <Footer />
     </UILayout>
