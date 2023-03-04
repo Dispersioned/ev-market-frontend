@@ -46,7 +46,8 @@ export const NavItem = styled(Typography)`
     right: 0;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     &::before,
     &::after {
       height: 60%;
