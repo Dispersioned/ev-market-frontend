@@ -21,8 +21,11 @@ export function CarItem({ car }: CarItemProps) {
         <CarDescription>
           <Typography>
             Price:{' '}
-            <Typography component="span" fontWeight={600}>
-              ${car.price}
+            <Typography component="span" fontWeight={500}>
+              $
+              <Typography component="span" fontWeight={600}>
+                {car.price}
+              </Typography>
             </Typography>
           </Typography>
           <Typography>Range: {car.range} km</Typography>
