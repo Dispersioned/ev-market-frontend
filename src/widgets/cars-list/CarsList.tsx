@@ -1,4 +1,5 @@
 import { carApi } from 'shared/api/carApi';
+import { Loading } from 'shared/ui/loading';
 
 import { CarItem } from './CarItem';
 import { List } from './styles';
@@ -6,7 +7,7 @@ import { List } from './styles';
 export function CarsList() {
   const { data: cars, isLoading, error } = carApi.useFetchAllCarsQuery();
 
-  if (isLoading) return <div>loading</div>;
+  if (isLoading) return <Loading />;
 
   if (error) return <div>error</div>;
 

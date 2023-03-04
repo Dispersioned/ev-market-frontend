@@ -10,7 +10,7 @@ export const Content = styled('div')`
   grid-template-columns: fit-content(100%) 1fr fit-content(100%) fit-content(100%);
   align-items: center;
   gap: 30px;
-  padding: 10px 0;
+  padding: 6px 0;
 `;
 
 export const NavList = styled('ul')`
