@@ -7,6 +7,6 @@ export const ROUTES = {
   checkout: '/checkout',
   compare: '/compare',
   home: '/',
-  order: '/order/:id',
+  order: '/order',
   profile: '/profile',
 } as const;

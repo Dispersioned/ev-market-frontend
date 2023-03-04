@@ -1,5 +1,6 @@
 import { AdminPanel } from 'pages/admin-panel';
 import { Auth } from 'pages/auth';
+import { Car } from 'pages/car';
 import { Cart } from 'pages/cart';
 import { Catalog } from 'pages/catalog';
 import { Checkout } from 'pages/checkout';
@@ -19,8 +20,9 @@ export function AppRouter() {
       <Route path={ROUTES.catalog} element={<Catalog />} />
       <Route path={ROUTES.checkout} element={<Checkout />} />
       <Route path={ROUTES.compare} element={<Compare />} />
+      <Route path={`${ROUTES.car}/:id`} element={<Car />} />
       <Route index element={<Home />} />
-      <Route path={ROUTES.order} element={<OrderInfo />} />
+      <Route path={`${ROUTES.order}/:id`} element={<OrderInfo />} />
       <Route path={ROUTES.profile} element={<Profile />} />
       <Route path="*" element={<Navigate replace to="/" />} />
     </Routes>
