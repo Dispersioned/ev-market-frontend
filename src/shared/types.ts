@@ -52,7 +52,7 @@ export type IVehicleCondition = {
 
 export type ICarView = {
   id: number;
-  name: string;
+  carName: string;
   imageUrl: string;
   price: number;
   range: number;

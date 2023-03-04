@@ -14,12 +14,12 @@ export function CarItem({ car }: CarItemProps) {
     <ItemLayout>
       <GridArea name="image">
         <Link to={`${ROUTES.car}/${car.id}`}>
-          <CarImage src={car.imageUrl} alt={car.name} />
+          <CarImage src={car.imageUrl} alt={car.carName} />
         </Link>
       </GridArea>
       <GridArea name="name">
         <CarNameLink to={`${ROUTES.car}/${car.id}`}>
-          <Typography variant="h5">{car.name}</Typography>
+          <Typography variant="h5">{car.carName}</Typography>
         </CarNameLink>
       </GridArea>
       <GridArea name="description">
