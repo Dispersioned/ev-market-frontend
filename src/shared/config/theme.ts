@@ -5,5 +5,11 @@ export const theme = createTheme({
     allVariants: {
       fontFamily: "'Montserrat Alternates', sans-serif",
     },
+    body1: {
+      fontSize: 13,
+    },
+    h5: {
+      fontSize: 18,
+    },
   },
 });

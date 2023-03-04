@@ -1,5 +1,6 @@
 export const ROUTES = {
   admin: '/admin',
+  car: '/lot',
   auth: '/auth',
   cart: '/cart',
   catalog: '/catalog',
