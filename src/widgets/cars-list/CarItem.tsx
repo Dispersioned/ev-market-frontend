@@ -1,9 +1,10 @@
 import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
+import { GridArea } from 'shared/styles';
 import { ICarView } from 'shared/types';
 
-import { CarImage, CarNameLink, GridArea, ItemLayout } from './styles';
+import { CarImage, CarNameLink, ItemLayout } from './styles';
 
 type CarItemProps = {
   car: ICarView;

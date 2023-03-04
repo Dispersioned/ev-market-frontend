@@ -13,10 +13,6 @@ export const ItemLayout = styled('div')`
   grid-gap: 0 20px;
 `;
 
-export const GridArea = styled('div', { shouldForwardProp: (p) => p !== 'name' })<{ name: string }>`
-  grid-area: ${(props) => props.name};
-`;
-
 export const CarImage = styled('img')`
   max-height: 10rem;
 `;

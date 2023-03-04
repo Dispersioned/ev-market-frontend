@@ -7,14 +7,28 @@ export const carMocks: ICar[] = [
     carName: '2019 JAGUAR I-RACE',
     accelerationTime: 20,
     batteryCapacity: 2000,
-    // так-то фичи тут тоже нужны
-    // features: [
-    //   {
-    //     id: 1,
-    //     name: 'first feature',
-    //     iconUrl: mockImage,
-    //   },
-    // ],
+    features: [
+      {
+        id: 1,
+        name: 'first feature',
+        iconUrl: mockImage,
+      },
+      {
+        id: 2,
+        name: 'second feature',
+        iconUrl: mockImage,
+      },
+      {
+        id: 3,
+        name: 'thirn feature',
+        iconUrl: mockImage,
+      },
+      {
+        id: 4,
+        name: 'Lorem ipsum dolor sit.',
+        iconUrl: mockImage,
+      },
+    ],
     power: 500,
     price: 30000,
     range: 100,

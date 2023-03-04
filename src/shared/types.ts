@@ -24,16 +24,17 @@ export type IChargingOption = {
 
 export type IDriveTrain = 'RWD' | 'FWD' | 'AWD';
 
-export type ICarColor = string;
+export type ICarColor = 'red' | 'green' | 'blue' | 'yellow' | 'white' | 'black';
 
 export type IBodyStyle =
+  | 'Micro'
   | 'Sedan'
   | 'Coupe'
   | 'SportsCar'
-  | 'StationWagon'
   | 'HatchBack'
   | 'Convertible'
   | 'SUV'
+  | 'CUV'
   | 'MiniVan'
   | 'PickUpTruck';
 
@@ -51,11 +52,11 @@ type ICarGeneral = {
   mileage?: number;
   // if owned
   location?: ILocation;
+  features: IFeature[];
 };
 
 export type ICarView = ICarGeneral & {
   imageUrl: string;
-  features: IFeature[];
 };
 
 export type ICar = ICarGeneral & {

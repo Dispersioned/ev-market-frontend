@@ -4,6 +4,8 @@ import { ErrorScreen } from 'shared/ui/error-screen';
 import { Loading } from 'shared/ui/loading';
 import { Layout } from 'widgets/layout';
 
+import { CarCard } from './CarCard';
+
 export function Car() {
   const { id } = useParams();
   const { data: car, isLoading, error } = carApi.useFetchCarByIdQuery(+id!);
@@ -22,5 +24,5 @@ export function Car() {
       </Layout>
     );
 
-  return <Layout>Car</Layout>;
+  return <Layout>{car && <CarCard car={car} />}</Layout>;
 }
