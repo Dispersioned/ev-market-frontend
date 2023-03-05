@@ -1,4 +1,5 @@
 import { Button, Typography } from '@mui/material';
+import { useEffect } from 'react';
 import { Control, FieldValues, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { authApi } from 'shared/api/authApi';
@@ -9,9 +10,13 @@ import { Input } from 'shared/ui/input';
 import { FormLayout } from './AuthForm.style';
 
 export function LoginForm() {
-  const { control, handleSubmit } = useForm<ILoginFieldValues>();
+  const { control, handleSubmit, reset } = useForm<ILoginFieldValues>();
 
-  const [login, { isLoading }] = authApi.useLoginMutation();
+  const [login, { isLoading, isSuccess }] = authApi.useLoginMutation();
+
+  useEffect(() => {
+    if (isSuccess) reset();
+  }, [isSuccess]);
 
   const onSubmit = (data: ILoginFieldValues) => {
     login(data);

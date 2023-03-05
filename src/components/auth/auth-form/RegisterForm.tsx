@@ -1,4 +1,5 @@
 import { Button, Typography } from '@mui/material';
+import { useEffect } from 'react';
 import { Control, FieldValues, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { authApi } from 'shared/api/authApi';
@@ -9,9 +10,13 @@ import { Input } from 'shared/ui/input';
 import { FormLayout } from './AuthForm.style';
 
 export function RegisterForm() {
-  const { control, handleSubmit } = useForm<IRegisterFieldValues>();
+  const { control, handleSubmit, reset } = useForm<IRegisterFieldValues>();
 
-  const [register, { isLoading }] = authApi.useRegisterMutation();
+  const [register, { isLoading, isSuccess }] = authApi.useRegisterMutation();
+
+  useEffect(() => {
+    if (isSuccess) reset();
+  }, [isSuccess]);
 
   const onSubmit = (data: IRegisterFieldValues) => {
     if (data.password !== data.repeatPassword) return;
@@ -36,7 +41,7 @@ export function RegisterForm() {
       </Button>
       <Typography>
         Already have an account?&nbsp;
-        <Link to={ROUTES.register}>Sign in</Link>
+        <Link to={ROUTES.login}>Sign in</Link>
       </Typography>
     </FormLayout>
   );
