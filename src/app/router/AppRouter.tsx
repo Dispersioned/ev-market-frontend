@@ -15,7 +15,8 @@ export function AppRouter() {
   return (
     <Routes>
       <Route path={ROUTES.admin} element={<AdminPanel />} />
-      <Route path={ROUTES.auth} element={<Auth />} />
+      <Route path={ROUTES.login} element={<Auth type="login" />} />
+      <Route path={ROUTES.register} element={<Auth type="register" />} />
       <Route path={ROUTES.cart} element={<Cart />} />
       <Route path={ROUTES.catalog} element={<Catalog />} />
       <Route path={ROUTES.checkout} element={<Checkout />} />
