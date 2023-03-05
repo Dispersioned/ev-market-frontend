@@ -1,7 +1,7 @@
 import { IFeature } from 'shared/types';
 
+import { FeaturesList } from './CarFeatures.styles';
 import { FeatureItem } from './FeatureItem';
-import { FeaturesList } from './styles';
 
 type CarFeaturesProps = {
   features: IFeature[];

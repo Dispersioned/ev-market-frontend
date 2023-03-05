@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import { IFeature } from 'shared/types';
 
-import { FeatureIcon, UIFeatureItem } from './styles';
+import { FeatureIcon, UIFeatureItem } from './FeatureItem.styles';
 
 type FeatureItemProps = {
   feature: IFeature;
