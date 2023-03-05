@@ -1,12 +1,11 @@
 import { Tooltip } from '@mui/material';
 
-import { StatIcon, UICarStat } from './styles';
+import { StatIcon, UICarStat } from './CarStat.styles';
 
 type CarStatProps = {
   iconUrl: string;
   tooltip: string;
   value: number;
-  // eslint-disable-next-line react/require-default-props
   unit?: string;
 };
 

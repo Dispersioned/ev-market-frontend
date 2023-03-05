@@ -7,9 +7,9 @@ import { GridArea } from 'shared/styles';
 import { ICar } from 'shared/types';
 import { CarFeatures } from 'widgets/car-features';
 
+import { CarImage, CarStats, Content, Gallery, Info } from './CarCard.styles';
 import { CarGraph } from './CarGraph';
 import { CarStat } from './CarStat';
-import { CarImage, CarStats, Content, Gallery, Info } from './styles';
 
 type CarCardProps = {
   car: ICar;

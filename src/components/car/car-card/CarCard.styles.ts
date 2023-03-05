@@ -1,4 +1,4 @@
-import { Typography, styled } from '@mui/material';
+import { styled } from '@mui/material';
 
 export const Content = styled('div')`
   display: flex;
@@ -26,20 +26,10 @@ export const Info = styled('div')`
   grid-gap: 15px;
 `;
 
-export const UICarStat = styled(Typography)`
-  display: flex;
-  align-items: center;
-  gap: 3px;
-`;
-
 export const CarStats = styled('div')`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   height: 100%;
   gap: 10px;
-`;
-
-export const StatIcon = styled('img')`
-  max-height: 30px;
 `;
