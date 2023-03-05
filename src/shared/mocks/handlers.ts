@@ -4,6 +4,7 @@ import { rest } from 'msw';
 
 import { carMocks } from './car';
 import { carsViewMock } from './carsView';
+import { userMock } from './user';
 
 export const handlers = [
   rest.get('http://localhost:5000/car/all', (req, res, ctx) => {
@@ -23,5 +24,21 @@ export const handlers = [
       resp.status = 404;
       return resp;
     });
+  }),
+  rest.post('http://localhost:5000/auth/login', (req, res, ctx) => {
+    return res(
+      ctx.json({
+        token: 'user',
+        user: userMock,
+      })
+    );
+  }),
+  rest.post('http://localhost:5000/auth/register', (req, res, ctx) => {
+    return res(
+      ctx.json({
+        token: 'user',
+        user: userMock,
+      })
+    );
   }),
 ];

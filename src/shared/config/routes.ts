@@ -1,7 +1,8 @@
 export const ROUTES = {
   admin: '/admin',
   car: '/lot',
-  auth: '/auth',
+  login: '/login',
+  register: '/register',
   cart: '/cart',
   catalog: '/catalog',
   checkout: '/checkout',
