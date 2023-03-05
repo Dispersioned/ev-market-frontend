@@ -12,7 +12,7 @@ type CarStatProps = {
 
 export function CarStat({ iconUrl, value, unit, tooltip }: CarStatProps) {
   return (
-    <UICarStat>
+    <UICarStat fontWeight="inherit">
       <Tooltip title={tooltip}>
         <StatIcon src={iconUrl} alt={tooltip} />
       </Tooltip>
