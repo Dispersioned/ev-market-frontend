@@ -5,7 +5,9 @@ import ReactDOM from 'react-dom/client';
 if (process.env.NODE_ENV === 'development') {
   // eslint-disable-next-line global-require, @typescript-eslint/no-var-requires, import/extensions
   const { worker } = require('shared/mocks/browser');
-  worker.start();
+  worker.start({
+    onUnhandledRequest: 'bypass',
+  });
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

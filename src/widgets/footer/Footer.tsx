@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 
-import { UIFooter } from './style';
+import { UIFooter } from './styles';
 
 export function Footer() {
   return (

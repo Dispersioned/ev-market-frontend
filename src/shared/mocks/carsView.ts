@@ -1,10 +1,10 @@
 import mockImage from 'shared/mocks/image.png';
 import { ICarView } from 'shared/types';
 
-export const carViewMock: ICarView[] = [
+export const carsViewMock: ICarView[] = [
   {
     id: 5,
-    name: '2019 JAGUAR I-RACE',
+    carName: '2019 JAGUAR I-RACE',
     accelerationTime: 20,
     batteryCapacity: 2000,
     features: [
@@ -27,7 +27,7 @@ export const carViewMock: ICarView[] = [
   },
   {
     id: 3,
-    name: '2022 NISSAN LEAF',
+    carName: '2022 NISSAN LEAF',
     accelerationTime: 6,
     batteryCapacity: 4000,
     features: [

@@ -9,7 +9,7 @@ export function Home() {
   return (
     <Layout>
       <Hero>
-        <Typography variant="h1" fontSize={78} fontWeight={400}>
+        <Typography variant="h1" fontSize={60} fontWeight={400}>
           Electric Vehicle market
         </Typography>
         <Typography variant="h4">First in Rostov-on-Don</Typography>

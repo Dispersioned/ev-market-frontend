@@ -1,5 +1,5 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
-import { ICarView } from 'shared/types';
+import { ICar, ICarView } from 'shared/types';
 
 import { baseQuery } from '.';
 
@@ -10,6 +10,11 @@ export const carApi = createApi({
     fetchAllCars: builder.query<ICarView[], void>({
       query: () => ({
         url: 'car/all',
+      }),
+    }),
+    fetchCarById: builder.query<ICar, number>({
+      query: (id) => ({
+        url: `car/${id}`,
       }),
     }),
   }),
