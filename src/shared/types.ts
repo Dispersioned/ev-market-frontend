@@ -65,8 +65,8 @@ export type ICar = ICarGeneral & {
   driveTrain: IDriveTrain;
   topSpeed: number;
   weight: number;
-  frontCargoVolume: number;
-  rearCargoVolume: number;
+  frontCargoVolume?: number;
+  rearCargoVolume?: number;
   seatingCapacity: number;
   exteriorColor: ICarColor;
   bodyStyle: IBodyStyle;

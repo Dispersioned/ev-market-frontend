@@ -1,3 +1,4 @@
+import accelerationTimeIcon from 'assets/icons/accelerationTime.svg';
 import cargoIcon from 'assets/icons/cargo.svg';
 import seatIcon from 'assets/icons/seat.svg';
 import weightIcon from 'assets/icons/weight.svg';
@@ -11,25 +12,35 @@ import { CarStat } from './CarStat';
 type CarGraphProps = {
   bodyStyle: IBodyStyle;
   weight: number;
-  frontVolume: number;
-  rearVolume: number;
+  frontVolume?: number;
+  rearVolume?: number;
   seats: number;
+  accelerationTime: number;
 };
 
-export function CarGraph({ bodyStyle, weight, frontVolume, rearVolume, seats }: CarGraphProps) {
+export function CarGraph({ bodyStyle, weight, frontVolume, rearVolume, seats, accelerationTime }: CarGraphProps) {
   return (
     <GraphContainer>
       <UICarGraph>
-        <GridArea name="front">
-          <CarStat iconUrl={cargoIcon} tooltip="Front Cargo Volume" value={frontVolume} unit="l" />
-        </GridArea>
-        <GridArea name="back">
-          <CarStat iconUrl={cargoIcon} tooltip="Rear Cargo Volume" value={rearVolume} unit="l" />
-        </GridArea>
+        {frontVolume && (
+          <GridArea name="front">
+            <CarStat iconUrl={cargoIcon} tooltip="Front Cargo Volume" value={frontVolume} unit="l" />
+          </GridArea>
+        )}
+        {rearVolume && (
+          <GridArea name="back">
+            <CarStat iconUrl={cargoIcon} tooltip="Rear Cargo Volume" value={rearVolume} unit="l" />
+          </GridArea>
+        )}
         <GridArea name="bottom">
           <BottomStats>
             <CarStat iconUrl={weightIcon} tooltip="Weight" value={weight} unit="kg" />
             <CarStat iconUrl={seatIcon} tooltip="Seats" value={seats} />
+            <CarStat
+              iconUrl={accelerationTimeIcon}
+              tooltip="Time taken to get from 0 to 100 km per hour"
+              value={accelerationTime}
+            />
           </BottomStats>
         </GridArea>
         <GridArea name="car">

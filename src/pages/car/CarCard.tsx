@@ -27,10 +27,6 @@ export function CarCard({ car }: CarCardProps) {
       <Info>
         <GridArea name="title">
           <Typography variant="h3">{car.carName}</Typography>
-          <div style={{ display: 'flex', gap: 20 }}>
-            <Typography>{car.bodyStyle} ЗАМАПИТЬ В КАРТИНКУ С ТУЛТИПОМ</Typography>
-            <Typography>{car.accelerationTime}s / 100 kmh</Typography>
-          </div>
         </GridArea>
         <GridArea name="subinfo">
           <CarStats>
@@ -47,6 +43,7 @@ export function CarCard({ car }: CarCardProps) {
             frontVolume={car.frontCargoVolume}
             rearVolume={car.rearCargoVolume}
             seats={car.seatingCapacity}
+            accelerationTime={car.accelerationTime}
           />
         </GridArea>
         <GridArea name="features">
