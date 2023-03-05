@@ -1,5 +1,6 @@
 import { Typography } from '@mui/material';
 import { useForm } from 'react-hook-form';
+import { authApi } from 'shared/api/authApi';
 
 import { FormLayout } from './AuthForm.style';
 import { LoginActionBtns } from './LoginActionBtns';
@@ -13,7 +14,12 @@ type AuthFormProps = {
 
 export function AuthForm({ type }: AuthFormProps) {
   const { control, handleSubmit } = useForm();
-  const onLogin = (data: any) => {};
+
+  const [login, { isLoading }] = authApi.useLoginMutation();
+
+  const onLogin = (data: any) => {
+    login(data);
+  };
   const onRegister = (data: any) => {};
 
   return (

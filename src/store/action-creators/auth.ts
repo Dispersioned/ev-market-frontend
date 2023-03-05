@@ -1,10 +1,11 @@
 import { fetchMe } from 'shared/api';
 import { TOKEN_KEY } from 'shared/config/storageKeys';
+import { ILoginUserData } from 'shared/types/auth';
 import { IUser } from 'shared/types/user';
 import { AC } from 'store';
 import { viewerSlice } from 'store/slices/viewerSlice';
 
-export const validateToken = (): AC => async (dispatch) => {
+export const validateToken: AC = () => async (dispatch) => {
   const { loadViewer, errorLoading, viewerLoaded } = viewerSlice.actions;
   const token = localStorage.getItem(TOKEN_KEY);
   if (!token) {
@@ -21,14 +22,14 @@ export const validateToken = (): AC => async (dispatch) => {
   }
 };
 
-export const viewerLoaded =
-  (user: IUser, token: string): AC =>
-  async (dispatch) => {
-    localStorage.setItem(TOKEN_KEY, token);
-    dispatch(viewerSlice.actions.viewerLoaded(user));
-  };
+export const login: AC = (data: ILoginUserData) => async (dispatch) => {};
 
-export const logout = (): AC => async (dispatch) => {
+export const viewerLoaded: AC = (user: IUser, token: string) => async (dispatch) => {
+  localStorage.setItem(TOKEN_KEY, token);
+  dispatch(viewerSlice.actions.viewerLoaded(user));
+};
+
+export const logout: AC = () => async (dispatch) => {
   localStorage.removeItem(TOKEN_KEY);
   dispatch(viewerSlice.actions.logout());
 };
