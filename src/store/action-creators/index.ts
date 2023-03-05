@@ -1,5 +1,5 @@
-import { AppDispatch, AppStore } from 'store';
+import * as authAC from './auth';
 
-export const actionCreators = {};
-
-export type AC = (dispatch: AppDispatch, getState: AppStore['getState']) => void;
+export const actionCreators = {
+  ...authAC,
+};

@@ -15,7 +15,7 @@ const initialState: InitialState = {
   error: '',
 };
 
-const viewerSlice = createSlice({
+export const viewerSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
@@ -28,7 +28,7 @@ const viewerSlice = createSlice({
       state.isError = false;
       state.error = '';
     },
-    errorLoading(state, action: PayloadAction<IUser>) {
+    errorLoading(state, action: PayloadAction<string>) {
       state.isLoading = false;
       state.isError = true;
       state.error = action.payload;
