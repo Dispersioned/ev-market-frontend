@@ -13,8 +13,9 @@ export function RegisterForm() {
 
   const [register, { isLoading }] = authApi.useRegisterMutation();
 
-  const onSubmit = (data: any) => {
-    // register(data);
+  const onSubmit = (data: IRegisterFieldValues) => {
+    if (data.password !== data.repeatPassword) return;
+    register(data);
   };
 
   const genericControl = control as unknown as Control<FieldValues>;

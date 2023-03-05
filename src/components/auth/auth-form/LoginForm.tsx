@@ -13,7 +13,7 @@ export function LoginForm() {
 
   const [login, { isLoading }] = authApi.useLoginMutation();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: ILoginFieldValues) => {
     login(data);
   };
 
