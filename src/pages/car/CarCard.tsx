@@ -3,11 +3,11 @@ import batteryIcon from 'assets/icons/battery.svg';
 import powerIcon from 'assets/icons/power.svg';
 import rangeIcon from 'assets/icons/range.svg';
 import topSpeedIcon from 'assets/icons/topSpeed.svg';
-import weightIcon from 'assets/icons/weight.svg';
 import { GridArea } from 'shared/styles';
 import { ICar } from 'shared/types';
 import { CarFeatures } from 'widgets/car-features';
 
+import { CarGraph } from './CarGraph';
 import { CarStat } from './CarStat';
 import { CarImage, CarStats, Content, Gallery, Info } from './styles';
 
@@ -38,10 +38,17 @@ export function CarCard({ car }: CarCardProps) {
             <CarStat iconUrl={powerIcon} tooltip="Power" value={car.power} unit="kw" />
             <CarStat iconUrl={rangeIcon} tooltip="Range" value={car.range} unit="km" />
             <CarStat iconUrl={topSpeedIcon} tooltip="Top Speed" value={car.topSpeed} unit="km/h" />
-            {/* <CarStat iconUrl={weightIcon} tooltip="Weight" value={car.weight} unit="kg" /> */}
           </CarStats>
         </GridArea>
-        <GridArea name="graph">text</GridArea>
+        <GridArea name="graph">
+          <CarGraph
+            bodyStyle={car.bodyStyle}
+            weight={car.weight}
+            frontVolume={car.frontCargoVolume}
+            rearVolume={car.rearCargoVolume}
+            seats={car.seatingCapacity}
+          />
+        </GridArea>
         <GridArea name="features">
           <CarFeatures features={car.features} />
         </GridArea>

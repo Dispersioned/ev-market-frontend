@@ -10,7 +10,7 @@ import Sedan from 'assets/icons/carbody/Sedan.svg';
 import SportsCar from 'assets/icons/carbody/SportsCar.svg';
 import { IBodyStyle } from 'shared/types';
 
-export const carBodyIconMap: Record<IBodyStyle, string> = {
+export const CAR_BODY_ICON_MAP: Record<IBodyStyle, string> = {
   Micro,
   Sedan,
   Coupe,

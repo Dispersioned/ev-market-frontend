@@ -4,9 +4,10 @@ import { StatIcon, UICarStat } from './styles';
 
 type CarStatProps = {
   iconUrl: string;
-  value: number;
-  unit: string;
   tooltip: string;
+  value: number;
+  // eslint-disable-next-line react/require-default-props
+  unit?: string;
 };
 
 export function CarStat({ iconUrl, value, unit, tooltip }: CarStatProps) {
@@ -15,7 +16,7 @@ export function CarStat({ iconUrl, value, unit, tooltip }: CarStatProps) {
       <Tooltip title={tooltip}>
         <StatIcon src={iconUrl} alt={tooltip} />
       </Tooltip>
-      {value} {unit}
+      {value} {unit && unit}
     </UICarStat>
   );
 }
