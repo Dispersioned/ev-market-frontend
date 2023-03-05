@@ -2,8 +2,10 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { carApi } from 'shared/api/carApi';
 
 import { listenerMiddleware } from './listeners';
+import { viewer } from './slices/viewerSlice';
 
 const rootReducer = combineReducers({
+  viewer,
   [carApi.reducerPath]: carApi.reducer,
 });
 
