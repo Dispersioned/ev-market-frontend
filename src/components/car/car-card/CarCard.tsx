@@ -4,7 +4,7 @@ import powerIcon from 'assets/icons/power.svg';
 import rangeIcon from 'assets/icons/range.svg';
 import topSpeedIcon from 'assets/icons/topSpeed.svg';
 import { CarFeatures } from 'components/car/car-features';
-import { GridArea } from 'shared/styles';
+import { Flex, GridArea } from 'shared/styles';
 import { ICar } from 'shared/types';
 
 import { CarImage, CarStats, Content, Gallery, Info } from './CarCard.styles';
@@ -59,8 +59,13 @@ export function CarCard({ car }: CarCardProps) {
           <Typography>{car.sellersStory}</Typography>
         </GridArea>
         <GridArea name="location">
-          <Typography>{car.location?.country}</Typography>
-          <Typography>{car.location?.city}</Typography>
+          <Typography variant="h6" fontWeight={500}>
+            Location
+          </Typography>
+          <Flex gap={7}>
+            <Typography fontWeight={500}>{car.location?.country}</Typography>
+            <Typography>{car.location?.city}</Typography>
+          </Flex>
         </GridArea>
       </Info>
     </Content>

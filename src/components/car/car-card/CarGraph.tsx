@@ -2,12 +2,12 @@ import accelerationTimeIcon from 'assets/icons/accelerationTime.svg';
 import cargoIcon from 'assets/icons/cargo.svg';
 import seatIcon from 'assets/icons/seat.svg';
 import weightIcon from 'assets/icons/weight.svg';
-import { CarStat } from 'components/car/car-card/CarStat';
 import { CAR_BODY_ICON_MAP } from 'shared/config/carBodyIconMap';
 import { GridArea } from 'shared/styles';
 import { IBodyStyle } from 'shared/types';
 
 import { BottomStats, CarImg, GraphContainer, UICarGraph } from './CarGraph.styles';
+import { CarStat } from './CarStat';
 
 type CarGraphProps = {
   bodyStyle: IBodyStyle;
