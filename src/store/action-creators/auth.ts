@@ -22,8 +22,6 @@ export const validateToken: AC = () => async (dispatch) => {
   }
 };
 
-export const login: AC = (data: ILoginUserData) => async (dispatch) => {};
-
 export const viewerLoaded: AC = (user: IUser, token: string) => async (dispatch) => {
   localStorage.setItem(TOKEN_KEY, token);
   dispatch(viewerSlice.actions.viewerLoaded(user));
