@@ -1,4 +1,4 @@
-import { IUser } from 'shared/types/user';
+import { IUser } from 'shared/types';
 
 export const userMock: IUser = {
   id: 1,

@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import { PropsWithChildren, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
 import { useAction, useTypeSelector } from 'shared/hooks/redux';
 import { Loading } from 'shared/ui/loading';
 import { Layout } from 'widgets/layout';
 
-type TokenValidatorProviderProps = React.PropsWithChildren;
+type TokenValidatorProviderProps = PropsWithChildren;
 
 export function TokenValidatorProvider({ children }: TokenValidatorProviderProps) {
   const navigate = useNavigate();

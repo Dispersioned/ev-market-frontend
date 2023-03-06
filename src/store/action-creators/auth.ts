@@ -1,7 +1,6 @@
 import { fetchMe } from 'shared/api';
 import { TOKEN_KEY } from 'shared/config/storageKeys';
-import { ILoginUserData } from 'shared/types/auth';
-import { IUser } from 'shared/types/user';
+import { ILoginUserData, IUser } from 'shared/types';
 import { AC } from 'store';
 import { viewerSlice } from 'store/slices/viewerSlice';
 

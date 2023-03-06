@@ -1,10 +1,11 @@
 import { Container } from '@mui/material';
+import { PropsWithChildren } from 'react';
 import { Footer } from 'widgets/footer';
 import { Header } from 'widgets/header';
 
 import { UILayout } from './styles';
 
-type LayoutProps = React.PropsWithChildren;
+type LayoutProps = PropsWithChildren;
 
 export function Layout({ children }: LayoutProps) {
   return (
