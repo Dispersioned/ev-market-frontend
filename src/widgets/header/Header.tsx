@@ -1,16 +1,20 @@
-import { Container, Typography } from '@mui/material';
+import { Container, IconButton, Typography } from '@mui/material';
 import loginIcon from 'assets/icons/login.svg';
 import logoIcon from 'assets/icons/logo.svg';
+import logoutIcon from 'assets/icons/logout.svg';
 import profileIcon from 'assets/icons/profile.svg';
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
-import { useTypeSelector } from 'shared/hooks/redux';
+import { useAction, useTypeSelector } from 'shared/hooks/redux';
+import { Flex } from 'shared/styles';
 
 import { Navigation } from './Navigation';
 import { Content, UIHeader } from './styles';
 
 export function Header() {
   const user = useTypeSelector((state) => state.viewer.user);
+
+  const { logout } = useAction();
 
   return (
     <UIHeader>
@@ -22,9 +26,14 @@ export function Header() {
           <Navigation />
           <Typography>contact us</Typography>
           {user ? (
-            <Link to={ROUTES.profile}>
-              <img src={profileIcon} alt="profile" />
-            </Link>
+            <Flex gap={10}>
+              <Link to={ROUTES.profile}>
+                <img src={profileIcon} alt="profile" />
+              </Link>
+              <button type="button" onClick={logout}>
+                <img src={logoutIcon} alt="logout" />
+              </button>
+            </Flex>
           ) : (
             <Link to={ROUTES.login}>
               <img src={loginIcon} alt="login" />
