@@ -41,4 +41,12 @@ export const handlers = [
       })
     );
   }),
+  rest.post('http://localhost:5000/auth/me', (req, res, ctx) => {
+    return res(
+      ctx.json({
+        token: 'user',
+        user: userMock,
+      })
+    );
+  }),
 ];
