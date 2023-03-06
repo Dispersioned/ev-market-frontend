@@ -18,6 +18,7 @@ export const validateToken: AC = () => async (dispatch) => {
     const userLoaded = await fetchMe(token);
     dispatch(viewerLoaded(userLoaded));
   } catch (err: any) {
+    localStorage.removeItem(TOKEN_KEY);
     dispatch(errorLoading(err.message));
   }
 };

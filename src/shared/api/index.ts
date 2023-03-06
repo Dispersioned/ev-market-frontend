@@ -6,7 +6,8 @@ export const baseQuery = fetchBaseQuery({
 });
 
 export async function fetchMe(token: string): Promise<IUser> {
-  const user = await fetch(`${process.env.API_URL}/me`, {
+  const user = await fetch(`${process.env.API_URL}/auth/me`, {
+    method: 'POST',
     body: JSON.stringify({
       token,
     }),
