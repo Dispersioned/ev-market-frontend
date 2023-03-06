@@ -10,7 +10,9 @@ type RoleRouteProps = {
 export function RoleRoute({ roles }: RoleRouteProps) {
   const user = useTypeSelector((state) => state.viewer.user);
 
-  if (roles && user && !roles.includes(user.role)) return <Navigate to={ROUTES.home} />;
+  if (roles && user && !roles.includes(user.role)) {
+    return <Navigate to={ROUTES.home} />;
+  }
 
   return <Outlet />;
 }
