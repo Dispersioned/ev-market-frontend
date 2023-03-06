@@ -4,7 +4,7 @@ import { Control, FieldValues, useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { authApi } from 'shared/api/authApi';
 import { ROUTES } from 'shared/config/routes';
-import { ILoginFieldValues } from 'shared/types/auth';
+import { ILoginFieldValues } from 'shared/types';
 import { Input } from 'shared/ui/input';
 
 import { FormLayout } from './AuthForm.style';

@@ -1,6 +1,5 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
-import { ILoginUserData, IRegisterUserData } from 'shared/types/auth';
-import { IUser } from 'shared/types/user';
+import { ILoginUserData, IRegisterUserData, IUser } from 'shared/types';
 
 import { baseQuery } from '.';
 

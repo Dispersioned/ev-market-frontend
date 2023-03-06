@@ -1,7 +1,7 @@
 import { Navigate, Outlet } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
 import { useTypeSelector } from 'shared/hooks/redux';
-import { IRole } from 'shared/types/user';
+import { IRole } from 'shared/types';
 
 type RoleRouteProps = {
   roles?: IRole[];

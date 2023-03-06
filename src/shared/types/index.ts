@@ -1,9 +1,4 @@
-import { IRole } from './user';
-
+export * from './auth';
 export * from './car';
-
-export type IRoute = {
-  path: string;
-  element: JSX.Element;
-  roles?: IRole[];
-};
+export * from './generic';
+export * from './user';

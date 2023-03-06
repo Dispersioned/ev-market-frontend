@@ -1,5 +1,5 @@
 import { fetchBaseQuery } from '@reduxjs/toolkit/dist/query';
-import { IUser } from 'shared/types/user';
+import { IUser } from 'shared/types';
 
 export const baseQuery = fetchBaseQuery({
   baseUrl: process.env.API_URL,
