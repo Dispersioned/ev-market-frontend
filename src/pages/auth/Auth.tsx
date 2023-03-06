@@ -1,4 +1,7 @@
 import { AuthForm } from 'components/auth/auth-form';
+import { Navigate } from 'react-router-dom';
+import { ROUTES } from 'shared/config/routes';
+import { useTypeSelector } from 'shared/hooks/redux';
 import { Layout } from 'widgets/layout';
 
 import { AuthFormWrapper } from './Auth.style';
@@ -8,6 +11,10 @@ type AuthProps = {
 };
 
 export function Auth({ type }: AuthProps) {
+  const user = useTypeSelector((state) => state.viewer.user);
+
+  if (user) return <Navigate to={ROUTES.home} />;
+
   return (
     <Layout>
       <AuthFormWrapper>
