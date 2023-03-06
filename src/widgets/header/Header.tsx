@@ -26,7 +26,7 @@ export function Header() {
           <Navigation />
           <Typography>contact us</Typography>
           {user ? (
-            <Flex gap={10}>
+            <Flex gap={20}>
               <Link to={ROUTES.profile}>
                 <img src={profileIcon} alt="profile" />
               </Link>
