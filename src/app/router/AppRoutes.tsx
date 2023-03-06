@@ -15,7 +15,7 @@ export const APP_ROUTES: IRoute[] = [
   {
     path: ROUTES.admin,
     element: <AdminPanel />,
-    roles: ['Admin'],
+    allowedRoles: ['Admin'],
   },
   {
     path: ROUTES.login,
@@ -28,7 +28,7 @@ export const APP_ROUTES: IRoute[] = [
   {
     path: ROUTES.cart,
     element: <Cart />,
-    roles: ['User'],
+    allowedRoles: ['Admin', 'User'],
   },
   {
     path: ROUTES.catalog,
@@ -37,7 +37,7 @@ export const APP_ROUTES: IRoute[] = [
   {
     path: ROUTES.checkout,
     element: <Checkout />,
-    roles: ['User'],
+    allowedRoles: ['Admin', 'User'],
   },
   {
     path: ROUTES.compare,
@@ -54,11 +54,11 @@ export const APP_ROUTES: IRoute[] = [
   {
     path: `${ROUTES.order}/:id`,
     element: <OrderInfo />,
-    roles: ['User'],
+    allowedRoles: ['Admin', 'User'],
   },
   {
     path: ROUTES.profile,
     element: <Profile />,
-    roles: ['User'],
+    allowedRoles: ['Admin', 'User'],
   },
 ];

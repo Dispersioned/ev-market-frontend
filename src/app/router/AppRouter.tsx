@@ -7,7 +7,7 @@ export function AppRouter() {
   return (
     <Routes>
       {APP_ROUTES.map((route) => (
-        <Route key={route.path} element={<RoleRoute roles={route.roles} />}>
+        <Route key={route.path} element={<RoleRoute roles={route.allowedRoles} />}>
           <Route path={route.path} element={route.element} />
         </Route>
       ))}
