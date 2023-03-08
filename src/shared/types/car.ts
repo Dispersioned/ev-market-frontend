@@ -53,6 +53,7 @@ type ICarGeneral = {
   // if owned
   location?: ILocation;
   features: IFeature[];
+  availableQuantity: number;
 };
 
 export type ICarView = ICarGeneral & {
