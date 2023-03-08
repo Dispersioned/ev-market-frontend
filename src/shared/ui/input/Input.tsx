@@ -1,8 +1,8 @@
 import { TextField } from '@mui/material';
-import { Controller, UseControllerProps } from 'react-hook-form';
+import { Control, Controller, UseControllerProps } from 'react-hook-form';
 
-type InputProps = {
-  control: UseControllerProps['control'];
+type InputProps<T> = {
+  control: T;
   label: string;
   name: string;
   defaultValue?: string;
@@ -10,7 +10,14 @@ type InputProps = {
   autoFocus?: boolean;
 };
 
-export function Input({ control, label, name, defaultValue = '', rules, autoFocus }: InputProps) {
+export function Input<ControlType extends Control<any, any>>({
+  control,
+  label,
+  name,
+  defaultValue = '',
+  rules,
+  autoFocus,
+}: InputProps<ControlType>) {
   return (
     <Controller
       render={({ field: { onChange, onBlur, value, ref } }) => (

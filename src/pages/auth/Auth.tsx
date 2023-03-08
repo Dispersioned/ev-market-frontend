@@ -13,7 +13,7 @@ type AuthProps = {
 export function Auth({ type }: AuthProps) {
   const user = useTypeSelector((state) => state.viewer.user);
 
-  if (user) return <Navigate to={ROUTES.home} />;
+  if (user) return <Navigate to={ROUTES.profile} />;
 
   return (
     <Layout>

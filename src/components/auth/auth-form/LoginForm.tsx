@@ -22,15 +22,13 @@ export function LoginForm() {
     login(data);
   };
 
-  const genericControl = control as unknown as Control<FieldValues>;
-
   return (
     <FormLayout>
       <Typography variant="h3" textTransform="uppercase" fontWeight={500} align="center">
         Sign in
       </Typography>
-      <Input label="Login" name="name" control={genericControl} rules={{ required: true }} />
-      <Input label="Password" name="password" control={genericControl} rules={{ required: true }} />
+      <Input label="Login" name="name" control={control} rules={{ required: true }} />
+      <Input label="Password" name="password" control={control} rules={{ required: true }} />
 
       <Button type="submit" onClick={handleSubmit(onSubmit)} variant="contained" disabled={isLoading}>
         Log in
