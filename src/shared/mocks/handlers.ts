@@ -50,8 +50,19 @@ export const handlers = [
   rest.get('http://localhost:5000/cart', (req, res, ctx) => {
     return res(ctx.json(cartMock));
   }),
-  rest.post('http://localhost:5000/cart/add', (req, res, ctx) => {
-    return res(ctx.json({ message: 'Added to cart' }));
+  rest.post('http://localhost:5000/cart/update', async (req, res, ctx) => {
+    const body = await req.json();
+
+    if (body.action === 'add') return res(ctx.json({ message: 'Added to cart' }));
+    if (body.action === 'substract') return res(ctx.json({ message: 'Substracted from cart' }));
+
+    return res((resp) => {
+      resp.body = JSON.stringify({
+        message: 'Action not recognized. It may by "add" or "substract" only',
+      });
+      resp.status = 404;
+      return resp;
+    });
   }),
   rest.get('http://localhost:5000/cart/quantity/:carId', (req, res, ctx) => {
     const carId = +req.params.carId;

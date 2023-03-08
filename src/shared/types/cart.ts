@@ -11,3 +11,8 @@ export type ICart = ICartItem[];
 export type ICartCarQuantity = {
   quantity: number;
 };
+
+export type IChangeQuantityData = {
+  carId: number;
+  action: 'add' | 'substract';
+};
