@@ -1,8 +1,8 @@
-import { ICartItem } from 'shared/types';
+import { ICart } from 'shared/types';
 
 import { carsViewMock } from './carsView';
 
-export const cartMock: ICartItem[] = [
+export const cartMock: ICart = [
   {
     id: 1,
     car: carsViewMock.find((car) => car.id === 1)!,
