@@ -3,7 +3,7 @@ import { ICarView } from 'shared/types';
 
 export const carsViewMock: ICarView[] = [
   {
-    id: 5,
+    id: 1,
     carName: '2019 JAGUAR I-RACE',
     accelerationTime: 20,
     batteryCapacity: 2000,
@@ -24,9 +24,10 @@ export const carsViewMock: ICarView[] = [
       country: 'Russia',
     },
     mileage: 12452,
+    availableQuantity: 3,
   },
   {
-    id: 3,
+    id: 2,
     carName: '2022 NISSAN LEAF',
     accelerationTime: 6,
     batteryCapacity: 4000,
@@ -51,5 +52,6 @@ export const carsViewMock: ICarView[] = [
     power: 700,
     price: 45000,
     range: 220,
+    availableQuantity: 1,
   },
 ];

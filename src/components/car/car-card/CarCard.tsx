@@ -1,4 +1,4 @@
-import { Paper, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import batteryIcon from 'assets/icons/battery.svg';
 import powerIcon from 'assets/icons/power.svg';
 import rangeIcon from 'assets/icons/range.svg';
@@ -7,6 +7,7 @@ import { CarFeatures } from 'components/car/car-features';
 import { Flex, GridArea } from 'shared/styles';
 import { ICar } from 'shared/types';
 
+import { AddToCart } from '../add-to-cart';
 import { CarImage, CarStats, Content, Gallery, Info } from './CarCard.styles';
 import { CarGraph } from './CarGraph';
 import { CarStat } from './CarStat';
@@ -50,7 +51,7 @@ export function CarCard({ car }: CarCardProps) {
           <CarFeatures features={car.features} />
         </GridArea>
         <GridArea name="price">
-          <Paper>Price</Paper>
+          <AddToCart carId={car.id} availableQuantity={car.availableQuantity} />
         </GridArea>
         <GridArea name="sellerStory">
           <Typography variant="h6" fontWeight={500}>

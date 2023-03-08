@@ -3,7 +3,7 @@ import { ICar } from 'shared/types';
 
 export const carMocks: ICar[] = [
   {
-    id: 5,
+    id: 1,
     carName: '2019 JAGUAR I-RACE',
     accelerationTime: 20,
     batteryCapacity: 2000,
@@ -72,5 +72,6 @@ export const carMocks: ICar[] = [
     condition: 'New',
     listedForSaleDate: new Date(),
     sellersStory: 'cool story bro Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    availableQuantity: 3,
   },
 ];
