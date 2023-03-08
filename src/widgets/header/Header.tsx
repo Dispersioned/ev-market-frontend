@@ -1,4 +1,5 @@
-import { Container, IconButton, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
+import cartIcon from 'assets/icons/cart.svg';
 import loginIcon from 'assets/icons/login.svg';
 import logoIcon from 'assets/icons/logo.svg';
 import logoutIcon from 'assets/icons/logout.svg';
@@ -27,6 +28,9 @@ export function Header() {
           <Typography>contact us</Typography>
           {user ? (
             <Flex gap={20}>
+              <Link to={ROUTES.cart}>
+                <img src={cartIcon} alt="cart" />
+              </Link>
               <Link to={ROUTES.profile}>
                 <img src={profileIcon} alt="profile" />
               </Link>
