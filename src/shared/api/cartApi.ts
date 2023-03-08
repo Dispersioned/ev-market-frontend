@@ -8,7 +8,7 @@ export const cartApi = createApi({
   baseQuery,
   tagTypes: ['Cart', 'QuantityInfo'],
   endpoints: (builder) => ({
-    fetchCart: builder.query<ICart, number>({
+    fetchCart: builder.query<ICart, void>({
       query: () => ({
         url: 'cart',
         method: 'GET',
