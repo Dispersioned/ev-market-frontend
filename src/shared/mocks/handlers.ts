@@ -15,15 +15,17 @@ export const handlers = [
 
     const car = carMocks.find((c) => c.id === carId);
 
-    if (car) return res(ctx.json(car));
-
-    return res((resp) => {
-      resp.body = JSON.stringify({
-        message: 'Lot not found',
+    if (!car) {
+      return res((resp) => {
+        resp.body = JSON.stringify({
+          message: 'Lot not found',
+        });
+        resp.status = 404;
+        return resp;
       });
-      resp.status = 404;
-      return resp;
-    });
+    }
+
+    return res(ctx.json(car));
   }),
   rest.post('http://localhost:5000/auth/login', (req, res, ctx) => {
     return res(
