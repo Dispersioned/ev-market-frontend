@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
 
-import { NavItem, NavList } from './styles';
+import { NavItem, NavList } from './Navigation.styles';
 
 type NavLink = {
   title: string;

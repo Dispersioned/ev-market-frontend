@@ -8,8 +8,8 @@ import { ROUTES } from 'shared/config/routes';
 import { useAction, useTypeSelector } from 'shared/hooks/redux';
 import { Flex } from 'shared/styles';
 
+import { Content, UIHeader } from './Header.styles';
 import { Navigation } from './Navigation';
-import { Content, UIHeader } from './styles';
 
 export function Header() {
   const user = useTypeSelector((state) => state.viewer.user);
