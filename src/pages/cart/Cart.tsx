@@ -1,4 +1,5 @@
 import { CartList } from 'components/cart/cart-list';
+import { CartSummary } from 'components/cart/cart-summary';
 import { cartApi } from 'shared/api/cartApi';
 import { ErrorScreen } from 'shared/ui/error-screen';
 import { Loading } from 'shared/ui/loading';
@@ -23,10 +24,13 @@ export function Cart() {
       </Layout>
     );
 
+  if (!cart) return null;
+
   return (
     <Layout title="Cart">
       <CartLayout>
-        {cart && <CartList cart={cart} />}
+        <CartList cart={cart} />
+        <CartSummary cart={cart} />
       </CartLayout>
     </Layout>
   );
