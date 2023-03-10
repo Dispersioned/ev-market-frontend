@@ -15,20 +15,20 @@ export const cartApi = createApi({
       }),
       providesTags: ['Cart'],
     }),
-    changeQuantity: builder.mutation<void, IChangeQuantityData>({
-      query: (data) => ({
-        url: 'cart/update',
-        body: data,
-        method: 'POST',
-      }),
-      invalidatesTags: ['CarQuantity'],
-    }),
     fetchCarQuantity: builder.query<ICartCarQuantity, number>({
       query: (carId) => ({
         url: `cart/quantity/${carId}`,
         method: 'GET',
       }),
       providesTags: ['CarQuantity'],
+    }),
+    changeQuantity: builder.mutation<void, IChangeQuantityData>({
+      query: (data) => ({
+        url: 'cart/update',
+        body: data,
+        method: 'POST',
+      }),
+      invalidatesTags: ['Cart', 'CarQuantity'],
     }),
   }),
 });
