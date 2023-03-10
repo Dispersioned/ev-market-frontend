@@ -1,4 +1,4 @@
-import { Button, Typography } from '@mui/material';
+import { Button, Checkbox, Typography } from '@mui/material';
 import { CarNameLink } from 'components/car/car-name-link';
 import { ChangeQuantity } from 'components/car/change-quantity';
 import { Flex, GridArea } from 'shared/styles';
@@ -16,6 +16,9 @@ export function CartItem({ car, quantity }: CartItemProps) {
 
   return (
     <LotLayout>
+      <GridArea name="select">
+        <Checkbox />
+      </GridArea>
       <GridArea name="image">
         <LotImg src={car.imageUrl} alt={car.carName} />
       </GridArea>

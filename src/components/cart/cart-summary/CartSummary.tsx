@@ -1,4 +1,4 @@
-import { Button, Card, CardContent, Tooltip, Typography } from '@mui/material';
+import { Card, CardContent } from '@mui/material';
 import { ICart } from 'shared/types';
 
 import { CheckoutButton } from './CheckoutButton';

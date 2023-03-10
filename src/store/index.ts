@@ -4,10 +4,12 @@ import { carApi } from 'shared/api/carApi';
 import { cartApi } from 'shared/api/cartApi';
 
 import { listenerMiddleware } from './listeners';
+import { cart } from './slices/cartSlice';
 import { viewer } from './slices/viewerSlice';
 
 const rootReducer = combineReducers({
   viewer,
+  cart,
   [carApi.reducerPath]: carApi.reducer,
   [authApi.reducerPath]: authApi.reducer,
   [cartApi.reducerPath]: cartApi.reducer,
