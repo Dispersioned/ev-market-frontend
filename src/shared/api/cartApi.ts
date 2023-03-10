@@ -6,14 +6,21 @@ import { baseQuery } from '.';
 export const cartApi = createApi({
   reducerPath: 'cartApi',
   baseQuery,
-  tagTypes: ['Cart', 'QuantityInfo'],
+  tagTypes: ['Cart', 'CarQuantity'],
   endpoints: (builder) => ({
-    fetchCart: builder.query<ICart, number>({
+    fetchCart: builder.query<ICart, void>({
       query: () => ({
         url: 'cart',
         method: 'GET',
       }),
       providesTags: ['Cart'],
+    }),
+    fetchCarQuantity: builder.query<ICartCarQuantity, number>({
+      query: (carId) => ({
+        url: `cart/quantity/${carId}`,
+        method: 'GET',
+      }),
+      providesTags: ['CarQuantity'],
     }),
     changeQuantity: builder.mutation<void, IChangeQuantityData>({
       query: (data) => ({
@@ -21,14 +28,7 @@ export const cartApi = createApi({
         body: data,
         method: 'POST',
       }),
-      invalidatesTags: ['QuantityInfo'],
-    }),
-    fetchCarQuantity: builder.query<ICartCarQuantity, number>({
-      query: (carId) => ({
-        url: `cart/quantity/${carId}`,
-        method: 'GET',
-      }),
-      providesTags: ['QuantityInfo'],
+      invalidatesTags: ['Cart', 'CarQuantity'],
     }),
   }),
 });

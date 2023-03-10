@@ -1,10 +1,11 @@
 import { Typography } from '@mui/material';
+import { CarNameLink } from 'components/car/car-name-link';
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/config/routes';
 import { GridArea } from 'shared/styles';
 import { ICarView } from 'shared/types';
 
-import { CarImage, CarNameLink, ItemLayout } from './styles';
+import { CarImage, ItemLayout } from './styles';
 
 type CarItemProps = {
   car: ICarView;
@@ -19,9 +20,7 @@ export function CarItem({ car }: CarItemProps) {
         </Link>
       </GridArea>
       <GridArea name="name">
-        <CarNameLink to={`${ROUTES.car}/${car.id}`}>
-          <Typography variant="h5">{car.carName}</Typography>
-        </CarNameLink>
+        <CarNameLink carId={car.id} name={car.carName} />
       </GridArea>
       <GridArea name="description">
         <Typography>

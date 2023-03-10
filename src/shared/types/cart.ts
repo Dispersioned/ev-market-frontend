@@ -6,7 +6,10 @@ export type ICartItem = {
   car: ICarView;
 };
 
-export type ICart = ICartItem[];
+export type ICart = {
+  haveErrors: boolean;
+  items: ICartItem[];
+};
 
 export type ICartCarQuantity = {
   quantity: number;

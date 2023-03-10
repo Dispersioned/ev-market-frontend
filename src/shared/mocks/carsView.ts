@@ -52,6 +52,6 @@ export const carsViewMock: ICarView[] = [
     power: 700,
     price: 45000,
     range: 220,
-    availableQuantity: 1,
+    availableQuantity: 0,
   },
 ];
