@@ -20,5 +20,7 @@ export function Cart() {
       </Layout>
     );
 
+  console.log('cart', cart);
+
   return <Layout>Cart</Layout>;
 }

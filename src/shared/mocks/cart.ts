@@ -6,7 +6,7 @@ export const cartMock: ICart = [
   {
     id: 1,
     car: carsViewMock.find((car) => car.id === 1)!,
-    quantity: 2,
+    quantity: 3,
   },
   {
     id: 2,
