@@ -67,7 +67,7 @@ export const handlers = [
   rest.get('http://localhost:5000/cart/quantity/:carId', (req, res, ctx) => {
     const carId = +req.params.carId;
 
-    const cartItem = cartMock.find((item) => item.car.id === carId);
+    const cartItem = cartMock.items.find((item) => item.car.id === carId);
 
     if (!cartItem) {
       return res((resp) => {

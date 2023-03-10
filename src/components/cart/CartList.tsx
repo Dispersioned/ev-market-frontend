@@ -10,7 +10,7 @@ type CartListProps = {
 export function CartList({ cart }: CartListProps) {
   return (
     <Flex col gap={15}>
-      {cart.map((item) => (
+      {cart.items.map((item) => (
         <CartItem key={item.id} car={item.car} quantity={item.quantity} />
       ))}
     </Flex>
