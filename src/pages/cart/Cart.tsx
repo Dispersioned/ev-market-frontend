@@ -1,3 +1,4 @@
+import { CartList } from 'components/cart';
 import { cartApi } from 'shared/api/cartApi';
 import { ErrorScreen } from 'shared/ui/error-screen';
 import { Loading } from 'shared/ui/loading';
@@ -20,7 +21,5 @@ export function Cart() {
       </Layout>
     );
 
-  console.log('cart', cart);
-
-  return <Layout>Cart</Layout>;
+  return <Layout title="Cart">{cart && <CartList cart={cart} />}</Layout>;
 }

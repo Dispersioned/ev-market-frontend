@@ -11,6 +11,6 @@ export const cartMock: ICart = [
   {
     id: 2,
     car: carsViewMock.find((car) => car.id === 2)!,
-    quantity: 0,
+    quantity: 1,
   },
 ];
