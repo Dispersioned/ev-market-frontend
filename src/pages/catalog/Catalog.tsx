@@ -3,7 +3,7 @@ import { Layout } from 'widgets/layout';
 
 export function Catalog() {
   return (
-    <Layout>
+    <Layout title="Catalog">
       <CarsList />
     </Layout>
   );
