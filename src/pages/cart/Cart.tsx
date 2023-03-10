@@ -1,11 +1,9 @@
-import { CartList } from 'components/cart/cart-list';
-import { CartSummary } from 'components/cart/cart-summary';
 import { cartApi } from 'shared/api/cartApi';
 import { ErrorScreen } from 'shared/ui/error-screen';
 import { Loading } from 'shared/ui/loading';
 import { Layout } from 'widgets/layout';
 
-import { CartLayout } from './Cart.styles';
+import { CartForm } from './CartForm';
 
 export function Cart() {
   const { data: cart, isLoading, error } = cartApi.useFetchCartQuery();
@@ -28,10 +26,7 @@ export function Cart() {
 
   return (
     <Layout title="Cart">
-      <CartLayout>
-        <CartList cart={cart} />
-        <CartSummary cart={cart} />
-      </CartLayout>
+      <CartForm cart={cart} />
     </Layout>
   );
 }
