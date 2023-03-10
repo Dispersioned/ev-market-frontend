@@ -6,7 +6,7 @@ import { baseQuery } from '.';
 export const cartApi = createApi({
   reducerPath: 'cartApi',
   baseQuery,
-  tagTypes: ['Cart', 'QuantityInfo'],
+  tagTypes: ['Cart', 'CarQuantity'],
   endpoints: (builder) => ({
     fetchCart: builder.query<ICart, void>({
       query: () => ({
@@ -21,14 +21,14 @@ export const cartApi = createApi({
         body: data,
         method: 'POST',
       }),
-      invalidatesTags: ['QuantityInfo'],
+      invalidatesTags: ['CarQuantity'],
     }),
     fetchCarQuantity: builder.query<ICartCarQuantity, number>({
       query: (carId) => ({
         url: `cart/quantity/${carId}`,
         method: 'GET',
       }),
-      providesTags: ['QuantityInfo'],
+      providesTags: ['CarQuantity'],
     }),
   }),
 });
