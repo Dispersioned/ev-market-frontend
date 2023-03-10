@@ -19,3 +19,7 @@ export type IChangeQuantityData = {
   carId: number;
   action: 'add' | 'substract';
 };
+
+export type ICheckoutData = {
+  selectedLotsId: number[];
+};

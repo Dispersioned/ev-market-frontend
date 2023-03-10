@@ -1,5 +1,5 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
-import { ICart, ICartCarQuantity, IChangeQuantityData } from 'shared/types';
+import { ICart, ICartCarQuantity, IChangeQuantityData, ICheckoutData } from 'shared/types';
 
 import { baseQuery } from '.';
 
@@ -25,6 +25,14 @@ export const cartApi = createApi({
     changeQuantity: builder.mutation<void, IChangeQuantityData>({
       query: (data) => ({
         url: 'cart/update',
+        body: data,
+        method: 'POST',
+      }),
+      invalidatesTags: ['Cart', 'CarQuantity'],
+    }),
+    makeCheckout: builder.mutation<{ checkoutToken: string }, ICheckoutData>({
+      query: (data) => ({
+        url: 'cart/buy',
         body: data,
         method: 'POST',
       }),

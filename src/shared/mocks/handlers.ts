@@ -85,4 +85,7 @@ export const handlers = [
       })
     );
   }),
+  rest.post('http://localhost:5000/cart/buy', async (req, res, ctx) => {
+    return res(ctx.json({ checkoutToken: `checkouttoken${Math.random().toFixed(10)}` }));
+  }),
 ];
